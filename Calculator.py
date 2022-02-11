@@ -1,3 +1,5 @@
+import CoreFunc
+
 operators = ["+", "-", "*", "/"]
 
 class Calc:
@@ -9,7 +11,6 @@ class Calc:
 		self.operator = []
 		self.input = input
 		self.n = 0
-		self.n1 = 0
 		self.curr_val = 0
 		self.b = 0
 		self.input = self.input.replace(" ", "")
@@ -26,13 +27,20 @@ class Calc:
 
 		if self.count > 1:
 			self.mi = True
-			for i in self.operator:
-				self.input = self.input.replace(i, " ")
+			
+			self.input = list(self.input)
+
+			for x in range(len(self.input)):
+				for i in self.operator:
+					if self.input[x-1] == "(" and i == self.input[x]:
+							self.input[x] = i
+					elif i == self.input[x]:
+						self.input[x] = " "
+
+			self.input = "".join(self.input)
+
 			self.input = self.input.split(" ")
-			self.input = "|".join(self.input)
-			self.input = self.input.replace(")", "")
-			self.input = self.input.replace("(", "")
-			self.input = self.input.split("|")
+			self.input = CoreFunc.unwrap(self.input)
 			for i in range(len(self.input)):
 				self.input[i] = int(self.input[i])
 
@@ -52,11 +60,18 @@ class Calc:
 
 		if self.mi == False:
 
-			self.input = self.input.split(self.operator[0])
-			self.input = "|".join(self.input)
-			self.input = self.input.replace(")", "")
-			self.input = self.input.replace("(", "")
-			self.input = self.input.split("|")
+			self.input = list(self.input)
+
+			for x in range(len(self.input)):
+				for i in self.operator:
+					if self.input[x-1] == "(" and i == self.input[x]:
+							self.input[x] = i
+					elif i == self.input[x]:
+						self.input[x] = " "
+
+			self.input = "".join(self.input)
+			self.input = self.input.split(" ")
+			self.input = CoreFunc.unwrap(self.input)
 			self.a = int(self.input[0].strip())
 			self.b = int(self.input[1].strip())
 
