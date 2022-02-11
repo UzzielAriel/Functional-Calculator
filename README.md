@@ -7,7 +7,7 @@ Run the following command through terminal:
 ```
 py Calculator.py
 ```
-Enter a mathematical operation for the program to compile, for example:
+Enter a mathematical operation for the program to calculate, for example:
 <br/>
 ```
 2 * 2 - (-5)
