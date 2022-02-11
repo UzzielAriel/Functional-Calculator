@@ -13,36 +13,29 @@ class Calc:
 		self.curr_val = 0
 		self.b = 0
 		self.input = self.input.replace(" ", "")
-		print(self.input)
+
 
 		for i in range(len(input)):
 			if input[i] in operators:
 				if i > 0:
 					if input[i-1] == "(":
-						print(self.operator)
 						continue
 				self.operator.append(input[i])
 				self.count += 1
-				continue
-		print(self.operator)
 		
+
 		if self.count > 1:
 			self.mi = True
 			for i in self.operator:
 				self.input = self.input.replace(i, " ")
 			self.input = self.input.split(" ")
-			print(self.input)
 			self.input = "|".join(self.input)
-			print(self.input)
 			self.input = self.input.replace(")", "")
 			self.input = self.input.replace("(", "")
-			print(self.input)
 			self.input = self.input.split("|")
-			print(self.input)
 			for i in range(len(self.input)):
 				self.input[i] = int(self.input[i])
-			print(self.input)
-			print(self.operator)
+
 
 			for i in range(len(self.input)):
 				if i + 2 > len(self.input):
