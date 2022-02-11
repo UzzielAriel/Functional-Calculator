@@ -18,4 +18,5 @@ The order of precedence is from left to right - Fixed in next commit
 <br/>
 # Issues
 If you find any issues, please contact me.
+Issues may also be caused if you don't have the correct python version - please ensure you have python 3.7+
 <br/>
