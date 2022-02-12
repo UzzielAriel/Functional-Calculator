@@ -1,6 +1,6 @@
 import CoreFunc
 
-operators = ["+", "-", "*", "/"]
+operators = ["+", "-", "*", "/",]
 
 class Calc:
 	def __init__(self, input):

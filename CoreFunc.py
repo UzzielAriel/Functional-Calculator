@@ -1,11 +1,16 @@
+
+
 def multb(input):
 	input = list(input)
 	for i in range(len(input)):
 		if i > 0:
-			if input[i] == "(" and input[i-1].isdigit():
-				input[i] = "*" + input[i]
-			elif input[i] == ")" and input[i+1].isdigit():
-				input[i] = "*" + input[i]
+			if i + 1 < len(input):
+				if input[i] == ")" and input[i+1] == "(":
+					input[i] = input[i] + "*"
+				elif input[i] == "(" and input[i-1].isdigit():
+					input[i] = "*" + input[i]
+				elif input[i] == ")" and input[i+1].isdigit():
+					input[i] = input[i] + "*"
 	input = "".join(input)
 	return input
 
