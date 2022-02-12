@@ -13,13 +13,14 @@ Enter a mathematical operation for the program to calculate, for example:
 2 * 2 - (-5)
 ```
 Plase note that if you don't want a negative sign recognised as an operator, place it within brackets.
-<br/>
-<h3>Features<h3>
-The order of precedence is from left to right
-Bracket multiplication
-Multiple operations
-Written as a parser
-<br/>
+# Features
+<ul>
+  <li>The order of precedence is from left to right</li>
+  <li>Bracket multiplication</li>
+  <li>Multiple operations</li>
+  <li>Written as a parser</li>
+</ul>
+
 # Issues
 If you find any issues, please contact me.
 <br/>
