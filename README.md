@@ -14,7 +14,11 @@ Enter a mathematical operation for the program to calculate, for example:
 ```
 Plase note that if you don't want a negative sign recognised as an operator, place it within brackets.
 <br/>
-The order of precedence is from left to right - Fixed in next commit
+<h3>Features<h3>
+The order of precedence is from left to right
+Bracket multiplication
+Multiple operations
+Written as a parser
 <br/>
 # Issues
 If you find any issues, please contact me.
