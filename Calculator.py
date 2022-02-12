@@ -15,13 +15,14 @@ class Calc:
 		self.b = 0
 		self.input = self.input.replace(" ", "")
 
+		self.input = CoreFunc.multb(self.input)
 
-		for i in range(len(input)):
-			if input[i] in operators:
+		for i in range(len(self.input)):
+			if self.input[i] in operators:
 				if i > 0:
-					if input[i-1] == "(":
+					if self.input[i-1] == "(":
 						continue
-				self.operator.append(input[i])
+				self.operator.append(self.input[i])
 				self.count += 1
 		
 
