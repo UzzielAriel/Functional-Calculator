@@ -81,7 +81,7 @@ class Calc:
 
 	def getop(self):
 		match self.operator[self.n]:
-			case"+":
+			case "+":
 				self.add()
 			case "-":
 				self.sub()
